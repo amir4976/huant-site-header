@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto+Slab&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background:rgb(208, 208, 208);
+    background:linear-gradient(324deg, rgba(00,00,00,1) 0%, rgb(70, 70, 70)100%) ; 
+    font-family: 'Oswald', sans-serif;
+    background-repeat: no-repeat;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+
+
+
+}
+/* الان ما با نو بار یه  نوار ابزار درست کردیم به سادگی */
+.navbar{
+    padding-left: 50px;
+    width: 100%;
+    height: 5vh;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    border-bottom: .5px solid rgba(109, 109, 109, 0.521);
+}
+nav{
+    flex: 1;
+    padding-left:60px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+a{
+    transition: all .5s;
+}
+a:hover{
+
+color: #fff;
+}
+h2{
+    margin-left:30px ;
+    color: #fff;
+
+}
+a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.425);
+
+}
+.main{
+    display: grid;
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows: repeat(16,1fr);
+}
+.txt{
+    grid-row: 2/4;
+    grid-column: 2/5;
+    color: #fff;
+    font-size: 60px;
+    /* font-family: 'Roboto Slab', serif; */
+    font-family: 'Inter', sans-serif;
+
+}
+.subt{
+    grid-row: 4/4;
+    grid-column: 2/7;
+    color: rgba(255, 255, 255, 0.425);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.inf{
+    grid-row: 10/5;
+    grid-column: 2/9;
+    overflow: hidden;
+    border-radius: 30px;
+  border: 1px solid rgba(163, 163, 163, 0.295);
+  display: grid;
+  grid-template-rows: repeat(3,1fr);
+font-family: monospace;
+
+}
+.inf::after{
+    content: '';
+width: 100px;
+height: 100px;
+position: absolute;
+left: 40%;
+top: 50%;
+margin: 10px;
+border-radius: 50%;
+background: hsl(13deg 83% 64%);
+filter: blur(60px);
+}
+.inf::before{
+    content: '';
+width: 100px;
+height: 100px;
+position: absolute;
+left: 45%;
+top: 60%;
+margin: 10px;
+border-radius: 50%;
+background: hsl(13deg 83% 64%);
+filter: blur(50px);
+}
+
+#a{
+    grid-row: 1/2;
+   
+}
+#b{
+    grid-row: 2/3;
+   
+}
+#c{
+    grid-row: 3/4;
+}
+.name{
+    margin: 30px;
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.158); */
+    color: rgba(255, 255, 255, 0.425);
+    font-size: 14px;
+}
+span{
+    color: #fff;
+   
+}
+/* الان ما به سادگی یه دکمه با انیمیشن پالس ساختیم */
+button.up{
+   background: hsl(13deg 83% 64%);
+    grid-row: 5/10;
+    grid-column: 8/9;
+    border-radius: 30px;
+    border: none;
+    transition: box-shadow .5s, transform 300ms;
+animation: pulse 500ms;
+
+}
+.up:hover{
+    box-shadow:1px 1px 20px hsl(13deg 83% 64%) ;
+    transform: scale(1.05);
+    
+}
+.up:active{
+    transform: scale(0.95);
+    animation: none;
+
+}
+
+
+button i{
+    color: white;
+}
+.hous{
+grid-column: 10/16;
+grid-row: 2/10;
+background: red;
+border-radius:30px ;
+background-image: url('./attachment-zero-take-WvHrrR1C5Po-unsplash.jpg');
+background-position: right;
+background-size: cover;
+}
+.down{
+    grid-column: 15/16;
+grid-row: 9/10;
+border-radius: 50%;
+background-color: rgba(0, 0, 0, 0.164);
+border: 8px solid rgba(20, 20, 20, 0.164);
+margin: 10px;
+transition: background-color .5s, border .5,transform 300ms;
+animation: pulse 500ms;
+}
+.down:hover{
+    background-color: rgb(0, 0, 0);
+border: 8px solid rgb(20, 20, 20);
+transform: scale(1.05);
+}
+.down:active{
+    transform: scale(0.95);
+    animation: none;
+
+}
+.map{
+width: 150px;
+height: 8;
+background: rgba(34, 34, 34, 0.075);
+font-size: 13px;
+color: rgba(255, 255, 255, 0.315);
+padding: 10px;
+font-family:monospace ;
+border-radius: 20px;
+margin-left: 10px;
+margin: 100px;
+transition: all .5s;
+cursor: pointer;
+
+}
+.map:hover{
+    width: 150px;
+height: 8;
+background: rgb(34, 34, 34);
+font-size: 13px;
+color: rgb(255, 255, 255);
+padding: 10px;
+font-family:monospace ;
+border-radius: 20px;
+margin-left: 10px;
+margin: 100px;
+}
+.more i{
+    position: absolute;
+    left: 95%;
+    top: 19px;
+        right: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+@keyframes pulse{
+    frome{
+        box-shadow: #ff69b4 0 0 0;
+    }
+    to{
+        box-shadow: #ff69b400 0 0 0 12px;
+    }
+}
